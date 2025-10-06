@@ -21,6 +21,7 @@
     --grupo-color-blue-dark:#054e9b;
 
 }
+
 *{
     margin: 0px;
     padding: 0px;
@@ -33,6 +34,10 @@ body{
 
 a{
     text-decoration: none;
+}
+.banner img{
+    width: 100%;
+    height: 100vh;
 }
 /*Nosso menu de navegação*/
 nav{
@@ -69,13 +74,15 @@ nav .logo a:hover{
 nav .checkbox{
     display: none;
     color: var(--grupo-color-blue);
+    
 }
 nav input{
     display: none;
+    
 }
 nav .checkbox i{
     font-size: 2rem;
-    color: var(--primaria-color);
+    color: var(--grupo-color-blue);
     cursor: pointer;
 }
 /*Área da lista */
@@ -101,7 +108,7 @@ ul li a:hover{
     color: var(--grupo-color-blue);
 }
 .section{
-    background-color: var(--grupo-color-white);
+    background-color: #e6e3e391;
 }
 .section_container{
     min-height: 100vh;
@@ -172,9 +179,12 @@ ul li a:hover{
     display: grid;
     place-items:center;
 }
+/*configuração da imagem*/
 .image img{
     width: min(25rem, 90%);
     border-radius: 100%;
+    height: 50%;
+    width: 100%;
 }
 
 
@@ -188,7 +198,7 @@ ul li a:hover{
         height: calc(100vh - 85px);
         left: -100%;
         top: 85px;
-        background-color: var(--extra-light);
+        background-color: var(--grupo-color-black);
         flex-direction: column;
         justify-content: center;
         gap: 3rem;
@@ -209,6 +219,9 @@ ul li a:hover{
     }
     .image{
         grid-area: 1/1/2/2;
+    }
+    .image img{
+        height: 100%;
     }
     .acao_btns{
         margin: auto;
