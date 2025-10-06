@@ -11,7 +11,11 @@
     opacity: 0;
     display: inline-block;
     background-color: var(--grupo-color-black);
+    border-bottom: 5px solid var(--grupo-color-blue);
     padding: 20px;
+}
+.depart{
+    border-bottom: none;
 }
 .depart:hover .drop{
     opacity: 1;
