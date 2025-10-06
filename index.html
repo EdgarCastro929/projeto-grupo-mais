@@ -5,25 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="image/grupo1-logowhite-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="fontawesome-free-7.1.0-web/css/all.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/dropdown.css">
     <title>Grupo+</title>
 </head>
 <body>
-    <header>
-        <nav class="menu">
-            <div class="logo"><a href="#"><img src="image/grupo1-logowhite.png" width="200" height="120" alt="logotipo"></a></div>
-            <label for="check" class="checkebox"><i class="fa-regular fa-trash"></i></label>
-            <input type="checkbox" name="check" id="check">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Departamentos</a></li>
-                <li><a href="#">Projectos</a></li>
-                <li><a href="#">Contactos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-
-    </main>
+   <nav>
+    <div class="nav_conteiner">
+        <div class="logo"><a href="#"><h1>Grupo+</h1></a></div>
+        <label for="check" class="checkbox">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <input type="checkbox" name="check" id="check">
+        <ul class="nav-link">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li class="depart"><a href="#">Departamentos</a>
+                <ul class="drop">
+                    <li><a href="#">+Softwere</a></li>
+                    <li><a href="#">+Devhub</a></li>
+                    <li><a href="#">+Design</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Projectos</a></li>
+            <li><a href="#">Contactos</a></li>
+        </ul>
+    </div>
+   </nav>
+   <section class="section">
+    <div class="section_container">
+        <div class="content">
+            <p class="subtitulo">Olá</p>
+            <h1 class="titulo">Eu sou <span>Edgar Castro Mangunza <br>um </span>desenvolvedor web</h1>
+            <p class="descricao">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perspiciatis, a qui facere ipsa dolore possimus consequatur dolor eius praesentium tempora ex nobis temporibus veniam debitis, beatae, dolorum deserunt officia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora culpa incidunt blanditiis delectus at praesentium quod ullam corporis inventore eveniet dicta, sed illo doloremque saepe quo natus ipsa maxime!
+            </p>
+            <div class="acao_btns">
+                <button class="click_aqui">Sobre mim</button>
+                <button class="click_aqui" id="portifolio">Portifolio</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="image/mascote.jpg"  alt="Grupo">
+        </div>
+    </div>
+</section>
 </body>
 </html>

@@ -1,0 +1,212 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "League";
+    src: url("../fonts/LeagueSpartan-Black.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Passion";
+    src: url("../fonts/PassionOne-Black.ttf") format("truetype");
+}
+
+:root{
+   /*Variáveis Globais*/
+    --texto-dark:#1f2937;
+    --texto-light:#6b7280;
+    --extra-light:#faf5ff;
+    --max-width:1200px;
+    --grupo-color-black:#000000;
+    --grupo-color-white:#ffffff;
+    --grupo-color-blue:#0964C8;
+    --grupo-color-blue-dark:#054e9b;
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+a{
+    text-decoration: none;
+}
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 99;
+}
+.nav_conteiner{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo a{
+    font-size: 1.5rem;
+    font-weight: 600px;
+    color: var(--primaria-color);
+    transition: .3s;
+}
+nav .logo a h1{
+    font-family: "League";
+    color: var(--grupo-color-blue);
+}
+nav .logo a:hover{
+    color: var(--primaria-color-dark);
+
+}
+nav .checkbox{
+    display: none;
+}
+nav input{
+    display: none;
+}
+nav .checkbox i{
+    font-size: 2rem;
+    color: var(--primaria-color);
+    cursor: pointer;
+}
+ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+ul li a{
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--texto-dark);
+    transition: 0.3s;
+}
+ul li a:hover{
+    border-top-color:var(--grupo-color-blue);
+    border-bottom-color: var(--grupo-color-blue);
+    color: var(--grupo-color-blue);
+}
+
+.section{
+    background-color: var(--extra-light);
+}
+.section_container{
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 4rem;
+}
+.content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.subtitulo{
+    letter-spacing: 2px;
+    color: var(--texto-light);
+    margin-bottom: .5rem;
+}
+.titulo{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--texto-dark);
+    margin-bottom: 1rem;
+}
+.titulo span{
+    font-weight: 600;
+}
+
+.descricao{
+    line-height: 1.5rem;
+    color: var(--texto-light);
+    margin-bottom: 2rem;
+}
+.acao_btns{
+    display: flex;
+    gap: 1rem;
+}
+.acao_btns button{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    outline: none;
+    border: 2px solid var(--grupo-color-blue);
+    border-radius: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+.click_aqui{
+    background-color: var(--grupo-color-blue);
+    color: #ffffff;
+}
+.click_aqui:hover{
+    background-color: var(--grupo-color-blue-dark);
+}
+#portifolio{
+    color: var(--grupo-color-blue-dark);
+    background-color: var(--grupo-color-white) ;
+}
+#portifolio:hover{
+    background-color: var(--grupo-color-blue-dark);
+    color: #ffffff;
+}
+.image{
+    display: grid;
+    place-items:center;
+}
+.image img{
+    width: min(25rem, 90%);
+    border-radius: 100%;
+}
+
+
+@media (width < 750px){
+    nav .checkbox{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        background-color: var(--extra-light);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked ~ ul{
+        left: 0;
+    }
+    
+    ul li a{
+        font-size: 1.25rem;
+    }
+
+    .section_container{
+        padding: 10rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .image{
+        grid-area: 1/1/2/2;
+    }
+    .acao_btns{
+        margin: auto;
+    }
+}
