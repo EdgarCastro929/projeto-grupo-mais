@@ -10,7 +10,8 @@
     left: 0;
     opacity: 0;
     display: inline-block;
-    background-color: #ffffff;padding: 20px;
+    background-color: var(--grupo-color-black);
+    padding: 20px;
 }
 .depart:hover .drop{
     opacity: 1;

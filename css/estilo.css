@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*Fontes Internas*/
 @font-face {
     font-family: "League";
     src: url("../fonts/LeagueSpartan-Black.ttf") format("truetype");
@@ -7,9 +8,9 @@
     font-family: "Passion";
     src: url("../fonts/PassionOne-Black.ttf") format("truetype");
 }
-
+/*Variáveis Globais*/
 :root{
-   /*Variáveis Globais*/
+   
     --texto-dark:#1f2937;
     --texto-light:#6b7280;
     --extra-light:#faf5ff;
@@ -27,19 +28,19 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    
+    font-family: Arial, Helvetica, sans-serif;    
 }
 
 a{
     text-decoration: none;
 }
+/*Nosso menu de navegação*/
 nav{
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: var(--grupo-color-black);
     z-index: 99;
 }
 .nav_conteiner{
@@ -50,6 +51,7 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
+/*Logotipo*/
 nav .logo a{
     font-size: 1.5rem;
     font-weight: 600px;
@@ -66,6 +68,7 @@ nav .logo a:hover{
 }
 nav .checkbox{
     display: none;
+    color: var(--grupo-color-blue);
 }
 nav input{
     display: none;
@@ -75,6 +78,7 @@ nav .checkbox i{
     color: var(--primaria-color);
     cursor: pointer;
 }
+/*Área da lista */
 ul{
     display: flex;
     align-items: center;
@@ -82,12 +86,13 @@ ul{
     list-style: none;
     transition: left 0.3s;
 }
+/*Área de Links*/
 ul li a{
     padding: 0.5rem 1rem;
     border: 2px solid transparent;
     text-decoration: none;
     font-weight: 600;
-    color: var(--texto-dark);
+    color: var(--grupo-color-blue);
     transition: 0.3s;
 }
 ul li a:hover{
@@ -95,9 +100,8 @@ ul li a:hover{
     border-bottom-color: var(--grupo-color-blue);
     color: var(--grupo-color-blue);
 }
-
 .section{
-    background-color: var(--extra-light);
+    background-color: var(--grupo-color-white);
 }
 .section_container{
     min-height: 100vh;
